@@ -1,0 +1,120 @@
+.home {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,auto-fit);
+    overflow-x: hidden;
+}
+
+.black {
+    background-color: map-get($color, principal);
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.text--white {
+    color: map-get($color, secundario);
+}
+
+figcaption {
+    display: none;
+}
+
+.invert {
+    flex-direction: row-reverse;
+}
+
+.block {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: auto;
+
+    &__img {
+        margin: auto;
+        img {
+            width: 100%;
+        }
+    }
+
+    &--add {
+        @extend .block;
+        width: 95%;
+    }
+
+    &__content {
+        align-self: center;
+        padding: 0 3rem;
+        margin: auto;
+    }
+
+    &__title {
+        text-align: left;
+    }
+    
+    &__text {
+        text-align: justify;
+    }
+}
+
+.media {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    
+
+    & i {
+        font-size: 2em;
+        color: map-get($color, secundario);
+        margin-right: 2rem;
+    }
+
+    &__body {
+        color: map-get($color, secundario);
+    
+        & h3 {
+            color: map-get($color, media-high);
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .block, .block--add {
+        flex-direction: column;
+        margin: auto;
+
+        &__img {
+            margin-top: 4rem;
+        }
+    }
+
+    .block__title, .text--add {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .block {
+
+        & h1 {
+            font-size: 5rem;
+        }
+
+        & h3 {
+        font-size: 2.3rem;
+        }
+
+        & p {
+        font-size: 1.6rem;
+        }
+    }
+
+    .media {
+        &__body p {
+            display: none;
+        }
+    }
+}

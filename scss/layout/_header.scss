@@ -1,0 +1,88 @@
+.list {
+    list-style: none;
+}
+
+.nav {
+    background-color: map-get($color, principal);
+    color: map-get($color, secundario);
+    padding: 1rem;
+    width: 100%;
+
+    &__list {
+        overflow: hidden;
+        position: relative;
+        margin-top: 80px;
+
+        &--btn {
+            clear: none;
+            max-height: 0px;
+            transition: max-height .2s ease-out; 
+        }
+    }
+
+    &__item {
+        padding: 0.5rem;
+        a { 
+            text-decoration: none;
+            display: block;
+            padding: 1.5rem;
+            color: map-get($color, secundario);
+            text-align: center;
+            font-size: 3rem;
+
+            &:hover {
+                @include hover (map-get($color, secundario), map-get($color, principal), 16px);
+            }
+        }
+    }
+
+    &__logo {
+        img {
+            width: 220px;
+            position: relative;
+            float: left;
+            padding: 0.65rem 0;   
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        &__icon {
+            cursor: pointer;
+            padding: 0.5rem;
+            position: relative;
+            float: right;
+            font-size: 2em;
+        }
+
+        &:checked ~ .nav__list {
+            max-height: 100vh;
+        } 
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .nav {
+        &__list{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 74px;
+            margin-top: 0;
+        }
+        &__item {
+            a{
+                font-size: 2.2rem;
+                padding: 0.7rem 1.4rem;
+            }
+        }
+
+        &__btn {
+            &__icon{
+                display: none;
+            }
+        }
+    }
+}

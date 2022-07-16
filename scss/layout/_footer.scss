@@ -1,0 +1,59 @@
+.footer {
+    width: 100%;
+    background-color: map-get($color, principal);
+    color: map-get($color, secundario);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 0.3fr 1fr;
+    grid-template-areas: 
+    "footer__icons footer__icons footer__icons"
+    "footer__logo footer__content footer__nav";
+
+    &--center {
+        justify-self: center;
+        align-self: center;
+    }
+
+    &__icons {
+        grid-area: footer__icons;
+        font-size: 1.5em;
+
+        a {
+            padding: 1.5rem;
+            color:  map-get($color, secundario);
+
+            &:hover {
+                @include hover (map-get($color, secundario), map-get($color, principal), 16px);
+            }
+        }
+    }
+
+    &__logo {
+        grid-area: footer__logo;
+    }
+
+    &__content {
+        grid-area: footer__content;
+        padding-left: 4rem;
+    }
+
+    &__nav {
+        grid-area: footer__nav;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,fr);
+        grid-template-areas: 
+        "footer__nav"
+        "footer__logo"
+        "footer__icons"
+    }
+
+    .footer__content {
+        display: none;
+    }
+}

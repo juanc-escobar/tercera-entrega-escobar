@@ -1,0 +1,73 @@
+
+.contacto {
+    margin: 7% 0;
+    overflow: hidden;
+
+    & h1 {
+        text-align: center;
+        font-size: 5.5rem;
+        margin-bottom: 3rem;
+    }
+
+    & p {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 2.3rem;
+    }
+}
+
+form {
+width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin: 1rem 0;
+}
+
+input, textarea, select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 3rem;
+}
+
+select {
+    margin-bottom: 2.2rem;
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+.redondo {
+    border-top: 3px solid rgb(175, 176, 177);
+    border-radius: 5px;
+    margin-bottom: 5rem;
+}
+
+.input-btn {
+    display: block;
+    width: 80%;
+    margin: 1.5rem auto;
+    height: 4rem;
+    font-size: 2rem;
+    border-radius: 30px;
+    min-width: 300px;
+
+    &:hover {
+        background-color: map-get($color, principal);
+        color: map-get($color, secundario);
+    }
+}
