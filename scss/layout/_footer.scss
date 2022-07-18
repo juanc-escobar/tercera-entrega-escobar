@@ -43,17 +43,23 @@
     }
 }
 
+@media screen and (max-width: 992px) {
+    .footer__content p {
+        font-size: 1.6rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .footer {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3,fr);
+        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
         grid-template-areas: 
-        "footer__nav"
-        "footer__logo"
-        "footer__icons"
-    }
+        "footer__icons footer__icons"
+        "footer__logo footer__nav";
 
-    .footer__content {
-        display: none;
+        &__content {
+            display: none;
+        }
     }
 }

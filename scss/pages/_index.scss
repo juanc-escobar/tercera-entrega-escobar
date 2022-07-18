@@ -80,6 +80,12 @@ figcaption {
 
 }
 
+@media screen and (max-width: 576px) {
+    .block h1 {
+        font-size: 4.5rem;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     .block, .block--add {

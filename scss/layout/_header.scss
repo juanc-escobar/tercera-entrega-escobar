@@ -25,10 +25,10 @@
         a { 
             text-decoration: none;
             display: block;
-            padding: 1.5rem;
+            padding: 0.5rem;
             color: map-get($color, secundario);
             text-align: center;
-            font-size: 3rem;
+            font-size: 2.5rem;
 
             &:hover {
                 @include hover (map-get($color, secundario), map-get($color, principal), 16px);
